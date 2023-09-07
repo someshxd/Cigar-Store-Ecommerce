@@ -1,0 +1,105 @@
+@import "../../../css-config/mixins.scss";
+
+.banner {
+  padding: 40px 0;
+  position: relative;
+  background-color: black;
+  color: white;
+  @include md {
+    height: calc(110vh - 80px);
+  }
+  .content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-self: center;
+    margin: 0 auto;
+    position: relative;
+
+    @include md {
+      flex-direction: row;
+      max-width: auto;
+    }
+    .img-content {
+      position: relative;
+      z-index: 9;
+      width: 100%;
+      margin-bottom: 20px;
+      @include md {
+        width: 70%;
+        margin-top: -34px;
+        margin-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+    .text-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      @include md {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 0px;
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 20px;
+        @include md {
+          font-size: 80px;
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        @include md {
+          font-size: 20px;
+          max-width: 500px;
+          line-height: 30px;
+          margin-bottom: 50px;
+        }
+      }
+      .ctas {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+        .cta-1 {
+          text-transform: uppercase;
+          font-size: 15px;
+          font-weight: 500;
+          //   width: fit-content;
+          border: 2px solid white;
+          padding: 10px 20px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        .cta-2 {
+          background-color: white;
+          color: black;
+          text-transform: uppercase;
+          font-size: 15px;
+          font-weight: 500;
+          //   width: fit-content;
+          border: 2px solid white;
+          padding: 10px 20px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

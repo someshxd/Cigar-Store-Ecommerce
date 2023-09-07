@@ -1,0 +1,89 @@
+@import "../../../css-config/mixins.scss";
+
+.newsletter {
+  color: white;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background: white url("../../../assets/newsletter.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .small-text {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: rgb(165, 164, 164);
+  }
+  .big-text {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 0 30px;
+    @include md {
+      font-size: 28px;
+    }
+  }
+  .form {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    input {
+      width: 200px;
+      height: 40px;
+      border-radius: 0;
+      border: 1px solid rgb(114, 114, 114);
+      padding: 0 12px;
+      font-size: 16px;
+      outline: 0;
+      @include md {
+        width: 300px;
+      }
+    }
+    button {
+      outline: 0;
+      border: 0;
+      height: 40px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      color: white;
+      background-color: rgb(41, 40, 40);
+      @include md {
+        width: 120px;
+      }
+    }
+  }
+  .text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: rgb(165, 164, 164);
+  }
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    .icon {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+      color: black;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
